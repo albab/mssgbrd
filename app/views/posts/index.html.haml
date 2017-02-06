@@ -1,0 +1,10 @@
+%h4 Latest Posts
+
+- @posts.each do |post|
+	= link_to post_path(post) do
+		.each_post.col-md-12
+			.left.col-md-6
+				%h1 #{post.title}
+			.right.col-md-6
+				.post_user
+					#{post.user.first_name} #{post.user.last_name}

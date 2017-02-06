@@ -1,0 +1,10 @@
+- @comments.each do |comment|
+	.each_comment.col-md-12{style: "border-left: 3px solid #{comment.color} !important;"}
+		.left.col-md-6
+			%h4 #{comment.body}
+		.right.col-md-6
+			.comment_user.pull-right
+				.comment_user_name
+					#{comment.user.first_name} #{comment.user.last_name}
+				.comment_time
+					#{comment.created_at}

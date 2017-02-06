@@ -1,0 +1,15 @@
+.post_header
+	%h1 #{@post.title}
+	%h5 #{@post.user.first_name} #{@post.user.last_name}
+%hr
+.post_body
+	%h6
+		#{@post.body}
+%hr
+
+%h4 Comments
+.all_comments
+	#comments
+		= render '/comments/index'
+#add_comment
+	= render '/comments/new'

@@ -1,0 +1,48 @@
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.left {
+	display: inline-block;
+	float: left;
+}
+
+.right {
+	display: inline-block;
+	float: right;
+}
+
+.each_post {
+	width: 100%;
+	display: block;
+}
+
+.post_user {
+	margin-top: 30px;
+	color: #828282;
+}
+
+.post_body {
+	padding: 20px;
+	background-color: #f2f2f2;
+}
+
+.comment-btn {
+	width: 100%;
+	margin-top: 5px;
+}
+
+.all_comments {
+	overflow: hidden;
+}
+
+.each_comment {
+	padding: 20px;
+	background-color: #fff;
+	border-left: 3px solid #9E9E9E;
+}
+
+#add_comment {
+	margin-top: 20px;
+}

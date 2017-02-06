@@ -1,0 +1,4 @@
+= form_tag '/add_comment', remote: true do
+	= text_area_tag :comment_text, nil, class: 'form-control comment-txt'
+	= hidden_field_tag :post, @post.id
+	= submit_tag 'Add Comment', class: 'btn btn-success comment-btn'
