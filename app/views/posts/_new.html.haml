@@ -1,0 +1,5 @@
+= form_tag '/save_post', remote: true do
+  = text_field_tag :title, nil, placeholder: "Title", required: true, class: 'form-control title-txt post-field'
+  = text_area_tag :body, nil, placeholder: "Body", required: true, class: 'form-control body-txt post-field'
+  = hidden_field_tag :user, current_user.id
+  = submit_tag 'Save Post', class: 'btn btn-success post-btn'

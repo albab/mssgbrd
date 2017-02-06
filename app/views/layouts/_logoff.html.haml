@@ -1,0 +1,4 @@
+- if current_user
+    .logoff.pull-right
+        = link_to destroy_user_session_path, method: :delete do
+            %span.fa.fa-power-off.fa-2x

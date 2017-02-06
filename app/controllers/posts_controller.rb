@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-  	@posts = Post.all
+  	@posts = Post.all.order("created_at desc")
   end
 
   def new
@@ -8,12 +8,16 @@ class PostsController < ApplicationController
   end
 
   def create
-  	@post = Post.create(post_params)
+  	@post = Post.create(title: params[:title], body: params[:body], user_id: params[:user])
+    @posts = Post.all.order("created_at desc")
   end
 
   def show
     @post = Post.find(params[:id])
-    @comments = @post.comments
+    @comments = @post.comments.order("created_at desc")
+  end
+
+  def add
   end
 
   private

@@ -21,6 +21,11 @@
 .post_user {
 	margin-top: 30px;
 	color: #828282;
+	display: inline-block;
+}
+.post_time {
+	color: #828282;
+	display: inline-block;
 }
 
 .post_body {
@@ -41,8 +46,16 @@
 	padding: 20px;
 	background-color: #fff;
 	border-left: 3px solid #9E9E9E;
+	border-top: 1px solid #dfdfdf;
+	border-right: 1px solid #dfdfdf;
 }
 
 #add_comment {
 	margin-top: 20px;
+}
+
+.post-field {
+	padding: 12px;
+	margin-top: 5px;
+	margin-bottom: 5px;
 }

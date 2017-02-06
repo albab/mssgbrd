@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   	resources :comments
   end
   post '/add_comment' => 'comments#create'
+  get '/add_post' => 'posts#add'
+  post '/save_post' => 'posts#create'
 end

@@ -1,10 +1,8 @@
 %h4 Latest Posts
-
-- @posts.each do |post|
-	= link_to post_path(post) do
-		.each_post.col-md-12
-			.left.col-md-6
-				%h1 #{post.title}
-			.right.col-md-6
-				.post_user
-					#{post.user.first_name} #{post.user.last_name}
+.add
+	= link_to 'Add Post', '/add_post', remote: true, class: 'btn btn-default'
+%hr.col-md-6
+.row
+	.all_posts.col-md-12.text-center
+		= render 'posts'
+= render 'add'

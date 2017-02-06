@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
   def index
-  	@comments = Comment.all
+  	@comments = Comment.all.order("created_at desc")
   end
 
   def new
@@ -9,7 +9,7 @@ class CommentsController < ApplicationController
 
   def create
   	@comment = Comment.create(body: params[:comment_text], user_id: current_user.id, post_id: params[:post])
-    @comments = @comment.post.comments
+    @comments = @comment.post.comments.order("created_at desc")
   end
 
   private
