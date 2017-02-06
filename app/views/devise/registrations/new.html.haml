@@ -24,6 +24,6 @@
                         = f.password_field :password_confirmation, autocomplete: "off", class: "form-control keyput", required: true
 
                     .form-group.text-center
-                        = f.submit "Log in to your account", class: "submit btn-default"
+                        = f.submit "Sign Up!", class: "submit btn-default"
             .already-account.text-center
-                = link_to 'Sign Up', new_user_registration_path
+                = link_to 'Log In', new_user_session_path
